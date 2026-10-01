@@ -1,11 +1,13 @@
 {
-  "precision": 0.907177033492823,
+  "precision": 0.9015544041450777,
   "recall": 1.0,
-  "f1": 0.9513296537882588,
-  "false_positive_rate": 0.008776692001447702,
-  "tp": 948,
-  "fp": 97,
+  "f1": 0.9482288828337874,
+  "false_positive_rate": 0.008535489667565139,
+  "tp": 174,
+  "fp": 19,
   "fn": 0,
-  "tn": 10955,
-  "observations": 12000
+  "tn": 2207,
+  "mean_detection_latency_ms": 0.0019419162500374416,
+  "test_observations": 2400,
+  "training_observations": 9600
 }

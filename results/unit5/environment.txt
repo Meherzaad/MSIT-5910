@@ -1,0 +1,6 @@
+Validation date: 2026-10-01 UTC
+Python 3.12.14; scikit-learn 1.8.0; pytest 9.1.1;
+pytest-cov 7.1.0; coverage 7.16.2.
+Unit suite: 43 passed in 1.93 seconds.
+Statements: 118/123 = 95.93%; branches: 33/36 = 91.67%.
+Combined coverage: 94.97%, displayed as 95%.

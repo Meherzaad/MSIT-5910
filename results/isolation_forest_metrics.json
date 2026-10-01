@@ -7,6 +7,7 @@
   "fp": 82,
   "fn": 67,
   "tn": 2144,
+  "mean_detection_latency_ms": 0.011981800000076722,
   "test_observations": 2400,
   "training_observations": 9600
 }

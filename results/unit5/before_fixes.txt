@@ -1,0 +1,33 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+______________________________ test_nan_rejected _______________________________
+
+    def test_nan_rejected():
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_regressions.py:7: Failed
+_________________ test_missing_field_rejected_even_after_alert _________________
+
+    def test_missing_field_rejected_even_after_alert():
+        row = dict(R, cpu_pct=99)
+        del row['temperature_c']
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_regressions.py:13: Failed
+_______________________ test_mismatched_labels_rejected ________________________
+
+    def test_mismatched_labels_rejected():
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_regressions.py:17: Failed
+=========================== short test summary info ============================
+FAILED tests/test_regressions.py::test_nan_rejected - Failed: DID NOT RAISE V...
+FAILED tests/test_regressions.py::test_missing_field_rejected_even_after_alert
+FAILED tests/test_regressions.py::test_mismatched_labels_rejected - Failed: D...
+3 failed in 0.02s

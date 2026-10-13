@@ -1,0 +1,88 @@
+{
+  "protocol": "Ten warmups; three batches of 100 serial authenticated loopback HTTP requests; one Gunicorn worker",
+  "normal": {
+    "status": 201,
+    "response": {
+      "baseline_anomaly": 0,
+      "config_version": "b1244d7709bf",
+      "created_at": "2026-10-13T05:42:37.436945+00:00",
+      "experimental_forest_anomaly": 0,
+      "id": 1,
+      "model_version": "iforest-200-0.08-seed5910",
+      "reasons": [],
+      "status": "normal",
+      "telemetry": {
+        "cpu_pct": 50.0,
+        "environment_temp_c": 24.0,
+        "memory_pct": 60.0,
+        "network_mbps": 400.0,
+        "storage_pct": 70.0,
+        "temperature_c": 55.0
+      }
+    }
+  },
+  "hot": {
+    "status": 201,
+    "response": {
+      "baseline_anomaly": 1,
+      "config_version": "b1244d7709bf",
+      "created_at": "2026-10-13T05:42:37.458007+00:00",
+      "experimental_forest_anomaly": 0,
+      "id": 2,
+      "model_version": "iforest-200-0.08-seed5910",
+      "reasons": [
+        "temperature_c: 90 >= 82"
+      ],
+      "status": "open",
+      "telemetry": {
+        "cpu_pct": 50.0,
+        "environment_temp_c": 24.0,
+        "memory_pct": 60.0,
+        "network_mbps": 400.0,
+        "storage_pct": 70.0,
+        "temperature_c": 90.0
+      }
+    }
+  },
+  "acknowledged": {
+    "status": 200,
+    "response": {
+      "id": 2,
+      "status": "acknowledged"
+    }
+  },
+  "dashboard_html_verified": true,
+  "batches": [
+    {
+      "batch": 1,
+      "median_ms": 14.59801700002572,
+      "p95_ms": 20.04118199988625,
+      "throughput_per_second": 65.99928118731088,
+      "successful": 100
+    },
+    {
+      "batch": 2,
+      "median_ms": 14.854266500037738,
+      "p95_ms": 18.56665599984808,
+      "throughput_per_second": 65.39636913944253,
+      "successful": 100
+    },
+    {
+      "batch": 3,
+      "median_ms": 14.6982175000403,
+      "p95_ms": 22.800622000204385,
+      "throughput_per_second": 63.272370893281916,
+      "successful": 100
+    }
+  ],
+  "database_records": 312,
+  "audit": [
+    [
+      2,
+      "technician",
+      "acknowledged"
+    ]
+  ],
+  "browser_reexecuted": false,
+  "docker_executed": false
+}

@@ -3,3 +3,6 @@ __pycache__/
 .coverage
 htmlcov/
 data/*.csv
+*.db
+.env
+.venv/

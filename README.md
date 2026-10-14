@@ -46,3 +46,54 @@ passing run. `results/unit5/evaluation.txt` records the full detector comparison
 Feature branches feed `development`; reviewed integration reaches `main`.
 Milestone tags and matching prereleases distinguish a verified prototype from
 an operational release. See `docs/unit5_release_notes.md` for prepared milestones.
+
+## Unit 6 integrated reproduction
+
+The Unit 6 submission reports are available as
+[Parts A–C](docs/Capstone_Unit6_Parts_ABC.docx) and
+[Part D Chapters 4–6](docs/Capstone_Chapters_4_5_6.docx).
+They include module source excerpts, workflow screenshots, evaluation tables,
+the comparison chart, and configuration instructions. The reports distinguish
+recorded quantitative results from archived browser captures and proposed
+deployment work. See the [implemented architecture](design/architecture.md)
+for the current request and persistence sequence.
+
+The `feature/unit6-integration-recovery` review branch restores an authenticated
+Flask dashboard, JSON API, cached detectors, SQLite observations, and atomic
+acknowledgement audit. It does not change the Unit 5 detector algorithms.
+Archived report screenshots cite an earlier local snapshot `7e517a6`; this
+restoration is a new implementation snapshot, not a claim to have retrieved
+that missing commit. See `docs/unit6_recovery_notes.md` for current results.
+
+From the repository root, install requirements, generate data, and evaluate
+before starting the application. Supply `APP_SECRET_KEY` and
+`DEMO_PASSWORD_HASH` privately; `.env.example` contains names only.
+
+```sh
+python -m pip install -r requirements.txt
+python src/generate_data.py
+python src/evaluate.py
+python -m pytest -q --cov=src --cov-branch --cov-report=json:results/unit6/coverage.json
+python -m compileall -q src
+python results/unit6/acceptance.py
+python -m gunicorn --chdir src --bind 127.0.0.1:8000 --workers 1 'app:create_app()'
+```
+
+`python results/unit6/revalidate_http.py` runs an independent loopback server,
+creates temporary random credentials, measures three serial request batches,
+and records outputs without publishing credentials. The generated database is
+excluded from Git. Do not run the restoration as an internet-facing service:
+identity federation, login throttling, HTTPS termination, and recovery checks
+remain staging prerequisites. Container execution and participant testing have
+not been performed.
+
+## Reviewed Unit 6 submission
+
+The reports use the required part titles and template chapter structure, with
+1,250 and 5,200 narrative words including headings. Figures, tables, commands,
+front matter, and references are excluded from these counts. Fresh verification
+passes 59 tests and all 300 measured serial HTTP requests. Separate statement
+and branch coverage are 98.23% and 94.83%. The reports retain archived browser
+evidence and distinguish planned Docker staging from completed local execution.
+See [submission verification](docs/unit6_submission_review.md) for the rubric
+mapping, reproducibility evidence, and merge versus staging criteria.

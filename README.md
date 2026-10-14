@@ -49,6 +49,15 @@ an operational release. See `docs/unit5_release_notes.md` for prepared milestone
 
 ## Unit 6 integrated reproduction
 
+The Unit 6 submission reports are available as
+[Parts A–C](docs/Capstone_Unit6_Parts_ABC.docx) and
+[Part D Chapters 4–6](docs/Capstone_Chapters_4_5_6.docx).
+They include module source excerpts, workflow screenshots, evaluation tables,
+the comparison chart, and configuration instructions. The reports distinguish
+recorded quantitative results from archived browser captures and proposed
+deployment work. See the [implemented architecture](design/architecture.md)
+for the current request and persistence sequence.
+
 The `feature/unit6-integration-recovery` review branch restores an authenticated
 Flask dashboard, JSON API, cached detectors, SQLite observations, and atomic
 acknowledgement audit. It does not change the Unit 5 detector algorithms.

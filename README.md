@@ -86,3 +86,14 @@ excluded from Git. Do not run the restoration as an internet-facing service:
 identity federation, login throttling, HTTPS termination, and recovery checks
 remain staging prerequisites. Container execution and participant testing have
 not been performed.
+
+## Reviewed Unit 6 submission
+
+The reports use the required part titles and template chapter structure, with
+1,250 and 5,200 narrative words including headings. Figures, tables, commands,
+front matter, and references are excluded from these counts. Fresh verification
+passes 59 tests and all 300 measured serial HTTP requests. Separate statement
+and branch coverage are 98.23% and 94.83%. The reports retain archived browser
+evidence and distinguish planned Docker staging from completed local execution.
+See [submission verification](docs/unit6_submission_review.md) for the rubric
+mapping, reproducibility evidence, and merge versus staging criteria.

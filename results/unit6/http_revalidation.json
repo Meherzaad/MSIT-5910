@@ -5,7 +5,7 @@
     "response": {
       "baseline_anomaly": 0,
       "config_version": "b1244d7709bf",
-      "created_at": "2026-10-13T05:42:37.436945+00:00",
+      "created_at": "2026-10-14T05:05:50.232012+00:00",
       "experimental_forest_anomaly": 0,
       "id": 1,
       "model_version": "iforest-200-0.08-seed5910",
@@ -26,7 +26,7 @@
     "response": {
       "baseline_anomaly": 1,
       "config_version": "b1244d7709bf",
-      "created_at": "2026-10-13T05:42:37.458007+00:00",
+      "created_at": "2026-10-14T05:05:50.244782+00:00",
       "experimental_forest_anomaly": 0,
       "id": 2,
       "model_version": "iforest-200-0.08-seed5910",
@@ -55,23 +55,23 @@
   "batches": [
     {
       "batch": 1,
-      "median_ms": 14.59801700002572,
-      "p95_ms": 20.04118199988625,
-      "throughput_per_second": 65.99928118731088,
+      "median_ms": 11.985625500074093,
+      "p95_ms": 14.913862999947014,
+      "throughput_per_second": 79.48198272689802,
       "successful": 100
     },
     {
       "batch": 2,
-      "median_ms": 14.854266500037738,
-      "p95_ms": 18.56665599984808,
-      "throughput_per_second": 65.39636913944253,
+      "median_ms": 11.993284500022128,
+      "p95_ms": 18.15557300005821,
+      "throughput_per_second": 75.48298746274571,
       "successful": 100
     },
     {
       "batch": 3,
-      "median_ms": 14.6982175000403,
-      "p95_ms": 22.800622000204385,
-      "throughput_per_second": 63.272370893281916,
+      "median_ms": 12.089651999986017,
+      "p95_ms": 19.929667999804224,
+      "throughput_per_second": 76.23764490057849,
       "successful": 100
     }
   ],

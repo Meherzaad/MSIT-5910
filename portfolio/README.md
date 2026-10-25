@@ -27,7 +27,7 @@ MSIT 5910, University of the People. A technician-centered research prototype co
 | [Reproduction instructions](../README.md#reproduce-the-unit-5-milestone) | Environment setup, evaluation, and test commands |
 
 ## Technical approach
-Python prototype; a fixed seed of 5910 supports repeatable synthetic data generation. Isolation Forest trains on the first 9,600 observations; both detectors score the final 2,400. Batch-average timings must not be interpreted as operational latency. Recorded test results are historical milestone evidence, not a new test run performed for this portfolio.
+Python prototype; a fixed seed of 5910 supports repeatable synthetic data generation. Isolation Forest trains on the first 9,600 observations; both detectors score the final 2,400. Recorded F1 scores are 0.94823 for the baseline and 0.58953 for Isolation Forest. The synthetic anomaly design favors threshold detection; these results do not establish general superiority. Batch-average timings must not be interpreted as operational latency. Recorded test results are historical milestone evidence, not a new test run performed for this portfolio.
 
 ## Learning demonstrated
 | Outcome | Evidence and scope |
